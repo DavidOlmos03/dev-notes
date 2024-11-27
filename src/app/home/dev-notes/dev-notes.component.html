@@ -1,0 +1,136 @@
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 fixed-top">
+        <div class="container">
+            <a href="https://mundostem.netlify.app/" class="navbar-brand">MS</a>
+            <a [routerLink]="['/dev-notes']" class="navbar-brand">DevNotes</a>
+            <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navmenu"
+            aria-controls="navmenu"
+            ><span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navmenu">
+                <ul class="navbar-nav ms-auto">
+                    <a routerLink="/dev-notes/angular" class="nav-link ms-auto">Angular</a>
+                </ul>
+                <ul class="navbar-nav">
+                    <a routerLink="/dev-notes/vuejs" class="nav-link ms-auto">Vuejs</a>
+                </ul>
+                <ul class="navbar-nav">
+                    <a routerLink="/dev-notes/php" class="nav-link ms-auto">PHP</a>
+                </ul>
+                <ul class="navbar-nav">
+                    <a routerLink="/dev-notes/python" class="nav-link ms-auto">Python</a>
+                </ul>
+                <ul class="navbar-nav">
+                    <a routerLink="/dev-notes/docker" class="nav-link ms-auto">Docker</a>
+                </ul>
+                <ul class="navbar-nav">
+                    <a routerLink="/dev-notes/venv" class="nav-link ms-auto">Entorno Virtual</a>
+                </ul>
+                <!-- <ul class="navbar-nav">
+                    <a href="dev-notes#cheat-sheet" class="nav-link ms-auto">Guías</a>
+                </ul> -->
+            </div>
+        </div>
+    </nav>
+    <!-- end nav -->
+
+    <!-- Bienvenida -->
+    <section class="bg-dark text-light p-5 pt-lg-0 text-center text-sm-start">
+        <div class="container">
+            <div class="d-sm-flex align-items-center justify-content-center">
+                <div class="mx-auto">
+                    <h1>Bienvenido a <span class="text-danger">Dev Notes</span></h1>
+                    <!-- Wellcome to Dev Notes -->
+                    <p class="lead my-4">
+                      Este sitio web es para compartir mis notas sobre diferentes tecnologías que he aprendido en mi viaje en el desarrollo de software. Es sólo una pequeña sección de mi portafolio.
+                      <!-- This website is for sharing my notes about different technologies that I have learned on my journey in software development. It is only a small section of my portfolio.
+                       -->
+                      </p>
+                      <a class="btn btn-primary btn-lg" href="/">
+                        Dale un vistazo!!
+                      </a>
+                </div>
+                <img class="img-fluid w-25 d-none d-sm-block" src="assets/imgs/imgDevNotes/code-notes-logo.png" alt="">
+            </div>
+        </div>
+    </section>
+    <!-- end section -->
+
+    <!-- start  -->
+    <router-outlet></router-outlet>
+    <!-- end section -->
+
+    <!-- start cheat-sheet -->
+    <section id="cheat-sheet" class="p-5 bg-dark text-light">
+      <div class="container">
+              <!-- <h1>Ejemplo de uso de <code>&lt;pre&gt;&lt;code&gt;</code> en HTML con Highlight.js</h1> -->
+               <h1>Otras guías utiles</h1>
+               <div class="row pt-5">
+                  <div class="col-md">
+                    <div class="d-flex content-justify-start pb-2">
+                      <h2>GitHub</h2>
+                      <img src="assets/imgs/imgDevNotes/iconGithub.png" class="img-fluid" alt="" style="width: 40px;">
+                    </div>
+                    <button
+                      class="btn btn-primary btn-rounded"
+                      onclick="location.href='assets/docs/github-cheat-sheet.pdf'"
+                      download>
+                      <span><img src="assets/imgs/imgDevNotes/iconPdf2.png" alt="pdfDownload"></span>
+                        Guia Atajos
+                    </button>
+                  </div>
+                  <div class="col-md">
+                    <div class="d-flex content-justify-start pb-2">
+                      <h2>HTML</h2>
+                      <img src="assets/imgs/imgDevNotes/iconTags.png" class="img-fluid" alt="" style="width: 40px;">
+                      <h6><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">css</a></h6>
+                    </div>
+                    <button
+                      class="btn btn-primary btn-rounded"
+                      onclick="location.href='assets/docs/html-tags-chart.pdf'"
+                      download>
+                      <span><img src="assets/imgs/imgDevNotes/iconPdf2.png" alt="pdfDownload"></span>
+                        Guia Atajos
+                    </button>
+                  </div>
+                  <div class="col-md">
+                    <div class="d-flex content-justify-start pb-2">
+                      <h2>MySQL</h2>
+                      <img src="assets/imgs/imgDevNotes/iconMysql.png" class="img-fluid" alt="" style="width: 40px;">
+                    </div>
+                    <button
+                      class="btn btn-primary btn-rounded"
+                      onclick="location.href='assets/docs/MySQL-Commands-Cheat-Sheet-by-PhoenixNAP.pdf'"
+                      download>
+                      <span><img src="assets/imgs/imgDevNotes/iconPdf2.png" alt="pdfDownload"></span>
+                        Guia Atajos
+                    </button>
+                  </div>
+               </div>
+
+
+              <!-- <pre>
+                <code [highlight]="codeForHighlight"
+                      language="ts"
+                      [lineNumbers]="true"
+                      >
+                    </code>
+              </pre> -->
+      </div>
+    </section>
+    <!-- end section -->
+    <footer class="footer py-3 bg-dark">
+      <div class="container">
+          <p class="small mb-0 text-light">
+              &copy;
+              Created By <a href="https://davidolmos-portfolio.netlify.app/"><span class="text-danger">Juan David Ruiz Olmos</span></a>
+          </p>
+      </div>
+    </footer>
+</body>
+
