@@ -1,9 +1,14 @@
+import React from 'react';
+import { Link } from "react-router-dom";
+
 function Menu() {
   return (
     <nav className="navbar navbar-expand-lg bg-dark navbar-dark py-3 fixed-top">
     <div className="container">
         <a href="https://mundostem.netlify.app/" className="navbar-brand">MS</a>
-        <a href="'/dev-notes'" className="navbar-brand">DevNotes</a>
+        
+        <Link to="/" className="navbar-brand">DevNotes</Link>
+       
         <button
         className="navbar-toggler"
         type="button"
@@ -14,27 +19,15 @@ function Menu() {
         </button>
         <div className="collapse navbar-collapse" id="navmenu">
             <ul className="navbar-nav ms-auto">
-                <a href="/dev-notes/angular" className="nav-link ms-auto">Angular</a>
+                <Link to="About" className='nav-link ms-auto'>About</Link>
+                {/* <a href="/dev-notes/angular" className="nav-link ms-auto">Angular</a> */}
             </ul>
             <ul className="navbar-nav">
-                <a href="/dev-notes/vuejs" className="nav-link ms-auto">Vuejs</a>
-            </ul>
-            <ul className="navbar-nav">
-                <a href="/dev-notes/php" className="nav-link ms-auto">PHP</a>
-            </ul>
-            <ul className="navbar-nav">
-                <a href="/dev-notes/python" className="nav-link ms-auto">Python</a>
-            </ul>
-            <ul className="navbar-nav">
-                <a href="/dev-notes/docker" className="nav-link ms-auto">Docker</a>
-            </ul>
-            <ul className="navbar-nav">
-                <a href="/dev-notes/venv" className="nav-link ms-auto">Entorno Virtual</a>
+               <Link to="contact" className='nav-link ms-auto'>Contact</Link>
             </ul>
         </div>
     </div>
 </nav>
-
   );
 };
 
