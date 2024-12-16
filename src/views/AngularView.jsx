@@ -60,7 +60,7 @@ const sectionsCol3 = [
 
 function AngularView() {
     return (
-        <div className="shadow-lg mx-5 mb-5 p-5 rounded-3">
+        <div className="shadow-lg mx-5 mb-5 px-5 pb-5 rounded-3">
             <TitleSection 
                 title="Angular"
                 image="/src/assets/imgs/angular.svg"

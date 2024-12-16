@@ -1,18 +1,23 @@
+import React, { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import About from '../pages/About.jsx';
-import NotFound from '../pages/NotFound.jsx';
-// Routes for Home 
-import Home from '../pages/Home.jsx';
-import Welcome from '../views/Welcome.jsx';
-import AngularView from '../views/AngularView.jsx';
-import VueJsView from '../views/VueJsView.jsx';
-import PhpView from '../views/PhpView.jsx';
-import PythonView from '../views/PythonView.jsx';
-import DockerView from '../views/DockerView.jsx';
-import VenvView from '../views/VenvView.jsx';
+
+// Lazy loaded pages
+const About = lazy(() => import('../pages/About'));
+const NotFound = lazy(() => import('../pages/NotFound'));
+const Home = lazy(() => import('../pages/Home'));
+
+// Lazy loaded views
+const Welcome = lazy(() => import('../views/Welcome'));
+const AngularView = lazy(() => import('../views/AngularView'));
+const VueJsView = lazy(() => import('../views/VueJsView'));
+const PhpView = lazy(() => import('../views/PhpView'));
+const PythonView = lazy(() => import('../views/PythonView'));
+const DockerView = lazy(() => import('../views/DockerView'));
+const VenvView = lazy(() => import('../views/VenvView'));
 
 const AppRouter = () => {
   return (
+    <Suspense fallback={<div>Loading...</div>}>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path='welcome' element={<Welcome />} />
@@ -25,6 +30,7 @@ const AppRouter = () => {
         <Route path="/about" element={<About />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+    </Suspense>
   );
 };
 
