@@ -4,10 +4,33 @@
     position: relative; /* Necessary for the ::before pseudo-element */
 }
 
+.btn{
+    transition: transform .7s ease-in-out;
+}
+
 .zoom-image {
     transition: transform .7s ease-in-out;
 }
 
+.btn:hover{
+    transform: scale(1.05);
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+}
+
 .zoom-image:hover {
     transform: rotate(-10deg) scale(1.1);
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+}
+
+#title{
+    color: rgb(213, 21, 0);
+    font-size: 4.4rem;
+}
+
+img{
+    transition: transform .7s ease-in-out;
+}
+
+img:hover{
+    transform: rotate(360deg);
 }
