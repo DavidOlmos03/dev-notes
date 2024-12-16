@@ -1,0 +1,13 @@
+.image-container {
+    overflow: hidden; 
+    display: inline-block;
+    position: relative; /* Necessary for the ::before pseudo-element */
+}
+
+.zoom-image {
+    transition: transform .7s ease-in-out;
+}
+
+.zoom-image:hover {
+    transform: rotate(-10deg) scale(1.1);
+}

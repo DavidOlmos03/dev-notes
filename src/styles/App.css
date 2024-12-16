@@ -1,3 +1,7 @@
+.AppRouter{
+  padding-top: 100rem;
+}
+
 body::before{
   display: block;
   content: '';

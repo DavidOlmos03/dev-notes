@@ -1,23 +1,32 @@
 // src/Home.jsx
-
-import React from 'react';
-import { Outlet, Link } from 'react-router-dom';
+import '../styles/Home.css'
 
 const Home = () => {
   return (
-    <div>
-      <nav className='navbar navbar-expand-lg bg-dark navbar-dark py-3 mx-5 rounded-bottom'>
-        <div className='container'>
-          <ul className='navbar-nav'><Link to="angular" className='text-decoration-none'>Angular</Link></ul>
-          <ul><Link to="vuejs" className='text-decoration-none'>Vue JS</Link></ul>
-          <ul><Link to="php" className='text-decoration-none'>PHP</Link></ul>
-          <ul><Link to="python" className='text-decoration-none'>Python</Link></ul>
-          <ul><Link to="docker" className='text-decoration-none'>Docker</Link></ul>
-          <ul><Link to="venv" className='text-decoration-none'>Entorno Virtual</Link></ul>
+    <section className="bg-light text-light p-5 text-center text-sm-start">
+        <div className="container">
+            <div className="d-sm-flex align-items-center justify-content-center">
+                <div className="p-5 shadow rounded mx-auto">
+                    <h1 className="text-dark">Bienvenido a <span className="text-danger">Dev Notes</span></h1>
+                    {/* Wellcome to Dev Notes */}
+                    <p className="lead my-4 text-dark">
+                      Este sitio web es para compartir mis notas sobre diferentes tecnologías que he aprendido en mi viaje en el desarrollo de software. Es sólo una pequeña sección de mi portafolio.
+                    {/*This website is for sharing my notes about different technologies that I have learned on my journey in software development. It is only a small section of my portfolio.*/}
+                    </p>
+                      <a className="btn btn-primary btn-lg" href="/">
+                        Dale un vistazo!!
+                      </a>
+                </div>
+                <div className="image-container">
+                <img
+                    className="zoom-image img-fluid"
+                    src="/src/assets/imgs/code-notes-logo.png"
+                    alt="codeNotesLogo"
+                    />  
+                </div>
+            </div>
         </div>
-      </nav>
-      <Outlet />
-    </div>
+    </section>
   );
 };
 

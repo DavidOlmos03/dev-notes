@@ -19,7 +19,6 @@ function Welcome() {
                     src="/src/assets/imgs/code-notes-logo.png"
                     alt="codeNotesLogo"
                     />
-
             </div>
         </div>
     </section>
