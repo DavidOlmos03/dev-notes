@@ -1,62 +1,9 @@
 import TitleSection from "../components/views/title";
 import PdfButton from "../components/views/pdfButton";
-import {CustomCodeBlock, CustomCopyBlock} from "../components/views/codeBlocks";
+import {ListGroupLeft, ListGroupRight} from "../components/views/listGroup";
 
-const sectionsCol1 = [
-    {
-        code: `ng new path/to/new_project`,
-        language: "typescript",
-        title: "Crear un nuevo proyecto",
-    },
-    {
-        code: `ng g s path/to/new_service --skip-tests`,
-        language: "typescript",
-        title: "Crear un servicio",
-    },
-    {
-        code: `ng generate module path/to/new_module`,
-        language: "typescript",
-        title: "Crear un módulo",
-    },
-];
-
-
-const sectionsCol2 = [
-    {
-        code: `ng g m path/to/new_module --routing`,
-        language: "typescript",
-        title: "Crear un módulo con rutas",
-    },
-    {
-        code: `ng generate component path/to/new_component`,
-        language: "typescript",
-        title: "Crear un componente",
-    },
-    {
-        code: `ng g c path/to/new_component --skip-tests`,
-        language: "typescript",
-        title: "Crear un componente sin espect",
-    },
-];
-
-const sectionsCol3 = [
-    {
-        code:  `Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass`,
-        language: "typescript",
-        title: "Cambiar la política de ejecución",
-    },
-    {
-        code:  `ng build --output-path docs --base-href=https://example.github.io/project_name/`,
-        language: "typescript",
-        title: "Github Pages",
-    },
-    {
-        code:  `npm run build`,
-        language: "typescript",
-        title: "Netlify",
-    }
-
-];
+import {CustomCodeBlock} from "../components/views/codeBlocks";
+import {sectionsCol1, sectionsCol2} from "../utils/angularData";
 
 function AngularView() {
     return (
@@ -64,12 +11,13 @@ function AngularView() {
             <TitleSection 
                 title="Angular"
                 image="/src/assets/imgs/angular.svg"
-                documentName="angular-cheat-sheet.pdf"
             />
             <PdfButton 
                 image="/src/assets/imgs/iconPdf.png"
+                alt="pdf"
+                documentName="angular-cheat-sheet.pdf"
             />
-            <div className="codes-block">
+            <div className="codes-block mt-5">
                 <div className="row">
                     <div className="col">
                         {sectionsCol1.map((section, index) => (
@@ -83,15 +31,16 @@ function AngularView() {
                     </div>
                 </div>
             </div>
+            <h2 className="mt-5"><a href="https://angular.dev/tutorials/learn-angular/1-components-in-angular">Curso de Angular</a></h2>
+            <h3>Notas curso</h3>
+            <ListGroupRight 
+                
+            />
+            <ListGroupLeft />
+            <ListGroupRight />
         </div>
     )
 }
 
 export default AngularView;
-
-
- // Angular
-
-
-//  deployNetlifyAngular = `npm run build`
 
