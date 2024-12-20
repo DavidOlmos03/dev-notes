@@ -17,7 +17,7 @@ const sections = [
   },
   {
     title: "MySQL",
-    imgSrc: "/src/assets/imgs/iconGithub.png",
+    imgSrc: "/src/assets/imgs/iconMysql.png",
     buttonLink: "assets/docs/github-cheat-sheet.pdf",
     buttonLabel: "Guia Atajos",
   },
