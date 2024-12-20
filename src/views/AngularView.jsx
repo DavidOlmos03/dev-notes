@@ -1,11 +1,31 @@
+import React, { useEffect, useState } from "react";
+
 import TitleSection from "../components/views/title";
 import PdfButton from "../components/views/pdfButton";
 import {ListGroupLeft, ListGroupRight} from "../components/views/listGroup";
 
 import {CustomCodeBlock} from "../components/views/codeBlocks";
-import {sectionsCol1, sectionsCol2} from "../utils/angularData";
+import {sectionsCol2} from "../utils/angularData";
+
+import { fetchSectionCol1Data } from "../utils/angularDataFireBase";
+
 
 function AngularView() {
+   // Estado para almacenar la data obtenida de Firebase
+   const [sectionsCol1, setSectionsCol1] = useState([]);
+
+   useEffect(() => {
+      async function fetchData() {
+      try{
+       const data = await fetchSectionCol1Data();
+        setSectionsCol1(data);
+      } catch (error){    
+        console.error("Error fetching data: ", error);
+      }
+      }
+      fetchData();
+    }, []);
+
     return (
         <div className="shadow-lg mx-5 mb-5 px-5 pb-5 rounded-3">
             <TitleSection 
@@ -20,9 +40,13 @@ function AngularView() {
             <div className="codes-block mt-5">
                 <div className="row">
                     <div className="col">
-                        {sectionsCol1.map((section, index) => (
+                        {sectionsCol1.length > 0 ? (
+                          sectionsCol1.map((section, index) => (
                             <CustomCodeBlock key={index} {...section} />
-                        ))}            
+                        ))
+                        ):(
+                        <p>Cargando datos...</p>
+                        )}            
                     </div>
                     <div className="col">
                         {sectionsCol2.map((section, index) => (
