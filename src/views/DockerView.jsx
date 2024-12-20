@@ -7,7 +7,7 @@ import {sectionsCol1, sectionsCol2} from "../utils/dockerData";
 
 const DockerView = () => {
     return (
-        <div className="shadow-lg mx-5 mb-5 px-5 pb-5 rounded-3">
+        <div>
         <TitleSection 
             title="Docker"
             image="/src/assets/imgs/iconDocker.png"

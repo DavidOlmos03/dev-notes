@@ -13,7 +13,9 @@ function App() {
       <div className="App">
       <Menu />	
       {/* Routes rendered here */}
-      <AppRouter className="AppRouter"/>
+      <div className="AppRouter shadow-lg m-md-5 p-md-5 m-2 p-2 rounded-3">
+        <AppRouter className="AppRouter"/>
+      </div>
       <CheatSheet />
       <Footer />
       </div>

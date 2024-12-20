@@ -10,11 +10,11 @@ import {sectionsCol2} from "../utils/angularData";
 import { fetchSectionCol1Data } from "../utils/angularDataFireBase";
 
 
-function AngularView() {
+function AngularView() { 
    // Estado para almacenar la data obtenida de Firebase
    const [sectionsCol1, setSectionsCol1] = useState([]);
 
-   useEffect(() => {
+   useEffect(( ) => {
       async function fetchData() {
       try{
        const data = await fetchSectionCol1Data();
@@ -27,7 +27,7 @@ function AngularView() {
     }, []);
 
     return (
-        <div className="shadow-lg mx-5 mb-5 px-5 pb-5 rounded-3">
+        <div>
             <TitleSection 
                 title="Angular"
                 image="/src/assets/imgs/angular.svg"

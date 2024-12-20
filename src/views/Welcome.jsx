@@ -15,7 +15,7 @@ function Welcome() {
                       </a>
                 </div>
                 <img
-                    className="img-fluid w-25 d-none d-sm-block"
+                    className="img-fluid w-25 d-none d-sm-block mx-5"
                     src="/src/assets/imgs/code-notes-logo.png"
                     alt="codeNotesLogo"
                     />

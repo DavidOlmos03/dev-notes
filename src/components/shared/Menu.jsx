@@ -1,7 +1,25 @@
+import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import '../../styles/Menu.css'
 
 function Menu() {
+  
+  const [showSecondNav, setShowSecondNav] = useState(false);
+  useEffect(()=>{
+     const handleScroll = () => {
+       if (window.scrollY > 100){
+         setShowSecondNav(false)
+       }else{
+         setShowSecondNav(true)
+       }
+     };
+
+    window.addEventListener('scroll', handleScroll);
+    return ()=>{
+      window.removeEventListener('scroll', handleScroll);
+    };
+  },[]);
+
   return (
       <div className="fixed-top">
       <nav className="navbar navbar-expand-lg bg-dark navbar-dark py-3">
@@ -28,6 +46,18 @@ function Menu() {
         </div>
       </div>
       </nav>
+
+      {/* Show the second navbar */}
+    {!showSecondNav && (
+        <div
+          className="bg-dark text-center text-white py-2"
+          onMouseEnter={() => setShowSecondNav(true)}
+          style={{ cursor: 'pointer' }}
+        >
+          ▼
+        </div>
+    )}
+    {showSecondNav && (
       <nav className="navbar navbar-expand-lg bg-dark navbar-dark mx-5 rounded-bottom">
         <div className="container">
           <ul className="navbar-nav mx-auto">
@@ -52,7 +82,8 @@ function Menu() {
           </ul>
         </div>
       </nav>
-      </div>
+    )}
+  </div>
   );
 };
 
