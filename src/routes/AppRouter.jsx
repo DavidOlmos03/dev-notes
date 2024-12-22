@@ -7,7 +7,6 @@ const NotFound = lazy(() => import('../pages/NotFound'));
 const Home = lazy(() => import('../pages/Home'));
 
 // Lazy loaded views
-const Welcome = lazy(() => import('../views/Welcome'));
 const AngularView = lazy(() => import('../views/AngularView'));
 const VueJsView = lazy(() => import('../views/VueJsView'));
 const PhpView = lazy(() => import('../views/PhpView'));

@@ -8,7 +8,7 @@ import {CustomCodeBlock} from "../components/views/CodeBlocks";
 import {sectionsCol2} from "../utils/angularData";
 
 import { fetchSectionCol1Data } from "../utils/angularDataFireBase";
-
+import { PersonalBarLoader } from "../components/views/Spinners"; 
 
 const AngularView = () => { 
    // Estado para almacenar la data obtenida de Firebase
@@ -44,8 +44,8 @@ const AngularView = () => {
                           sectionsCol1.map((section, index) => (
                             <CustomCodeBlock key={index} {...section} />
                         ))
-                        ):(
-                        <p>Cargando datos...</p>
+                        ):(  
+                          <PersonalBarLoader />
                         )}            
                     </div>
                     <div className="col">

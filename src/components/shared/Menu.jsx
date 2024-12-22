@@ -4,10 +4,10 @@ import '../../styles/Menu.css'
 
 function Menu() {
   
-  const [showSecondNav, setShowSecondNav] = useState(false);
+  const [showSecondNav, setShowSecondNav] = useState(true);
   useEffect(()=>{
      const handleScroll = () => {
-       if (window.scrollY > 100){
+       if (window.scrollY > 20){
          setShowSecondNav(false)
        }else{
          setShowSecondNav(true)
@@ -50,7 +50,7 @@ function Menu() {
       {/* Show the second navbar */}
     {!showSecondNav && (
         <div
-          className="bg-dark text-center text-white py-2"
+          className="second-nav bg-dark text-center text-white py-2"
           onMouseEnter={() => setShowSecondNav(true)}
           style={{ cursor: 'pointer' }}
         >
@@ -58,7 +58,7 @@ function Menu() {
         </div>
     )}
     {showSecondNav && (
-      <nav className="navbar navbar-expand-lg bg-dark navbar-dark mx-5 rounded-bottom">
+      <nav className="second-nav navbar navbar-expand-lg bg-dark navbar-dark mx-5 rounded-bottom">
         <div className="container">
           <ul className="navbar-nav mx-auto">
             <li className="nav-item px-2">
