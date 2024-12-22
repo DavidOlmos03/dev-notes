@@ -6,65 +6,72 @@ import {ListGroupLeft, ListGroupRight} from "../components/views/ListGroup";
 
 import {CustomCodeBlock} from "../components/views/CodeBlocks";
 import {sectionsCol2} from "../utils/angularData";
-
-import { fetchSectionCol1Data } from "../utils/angularDataFireBase";
+  
+import { fetchSectionColData } from "../services/firebase/fireBaseServices";
 import { PersonalBarLoader } from "../components/views/Spinners"; 
-
-const AngularView = () => { 
+  
+const AngularView = () => {   
    // Estado para almacenar la data obtenida de Firebase
    const [sectionsCol1, setSectionsCol1] = useState([]);
+   const [sectionsCol2, setSectionsCol2] = useState([]);
 
-   useEffect(( ) => {
-      async function fetchData() {
-      try{
-       const data = await fetchSectionCol1Data();
-        setSectionsCol1(data);
-      } catch (error){    
+   useEffect(( ) => {    
+      async function fetchData() {    
+      try{    
+        const data1 = await fetchSectionColData("angularData", "sectionCol1");
+        const data2 = await fetchSectionColData("angularData", "sectionCol2");
+        setSectionsCol1(data1);
+        setSectionsCol2(data2)
+      } catch (error){         
         console.error("Error fetching data: ", error);
-      }
-      }
-      fetchData();
-    }, []);
-
-    return (
-        <div>
-            <TitleSection 
-                title="Angular"
+      }    
+      }    
+      fetchData();    
+    }, []);    
+    
+    return (    
+        <div>    
+            <TitleSection     
+                title="Angular"    
                 image="/src/assets/imgs/angular.svg"
-            />
-            <PdfButton 
+            />    
+            <PdfButton     
                 image="/src/assets/imgs/iconPdf.png"
-                alt="pdf"
+                alt="pdf"    
                 documentName="angular-cheat-sheet.pdf"
-            />
+            />    
             <div className="codes-block mt-5">
-                <div className="row">
-                    <div className="col">
+                <div className="row">    
+                    <div className="col">    
                         {sectionsCol1.length > 0 ? (
                           sectionsCol1.map((section, index) => (
                             <CustomCodeBlock key={index} {...section} />
-                        ))
-                        ):(  
+                        ))  
+                        ):(    
                           <PersonalBarLoader />
-                        )}            
-                    </div>
-                    <div className="col">
-                        {sectionsCol2.map((section, index) => (
+                        )}              
+                    </div>   
+                    <div className="col">                          
+                        {sectionsCol2.length > 0 ? (
+                          sectionsCol2.map((section, index) => (
                             <CustomCodeBlock key={index} {...section} />
-                        ))}
-                    </div>
-                </div>
-            </div>
+                        ))  
+                        ):(    
+                          <PersonalBarLoader />
+                        )}              
+                    </div>  
+                </div>  
+            </div>  
             <h2 className="mt-5"><a href="https://angular.dev/tutorials/learn-angular/1-components-in-angular">Curso de Angular</a></h2>
-            <h3>Notas curso</h3>
-            <ListGroupRight 
-                
-            />
-            <ListGroupLeft />
-            <ListGroupRight />
-        </div>
-    )
-}
-
-export default AngularView;
-
+            <h3>Notas curso</h3>  
+            <ListGroupRight   
+                  
+            />  
+            <ListGroupLeft />  
+            <ListGroupRight />  
+        </div>  
+    )  
+}  
+  
+export default AngularView;  
+  

@@ -1,12 +1,12 @@
 import { getFirestore, doc, collection, getDoc, getDocs } from "firebase/firestore";
-import firebaseApp from "../services/firebase/firebaseConfig";
+import firebaseApp from "./firebaseConfig"; 
 
 const db = getFirestore(firebaseApp);
 
-export async function fetchSectionCol1Data() {
+export async function fetchSectionColData(nameCollection, nameDocument) {
   try {
     // Referencia al documento `sectionCol1`
-    const sectionCol1DocRef = doc(db, "angularData", "sectionCol1");
+    const sectionCol1DocRef = doc(db, nameCollection, nameDocument);
 
     // Obtener datos de las colecciones `1`, `2`, `3`
     const collections = ["1", "2", "3"];
@@ -26,3 +26,5 @@ export async function fetchSectionCol1Data() {
     console.error("Error fetching data:", error);
   }
 }
+
+
