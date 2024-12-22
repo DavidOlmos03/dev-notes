@@ -20,7 +20,6 @@ const AppRouter = () => {
     <Suspense fallback={<div>Loading...</div>}>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path='welcome' element={<Welcome />} />
         <Route path='angular' element={<AngularView />} />
         <Route path='vuejs' element={<VueJsView />} />
         <Route path='php' element={<PhpView />} />

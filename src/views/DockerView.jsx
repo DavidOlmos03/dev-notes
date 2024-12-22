@@ -1,8 +1,8 @@
-import TitleSection from "../components/views/title";
-import PdfButton from "../components/views/pdfButton";
-import {ListGroupLeft, ListGroupRight} from "../components/views/listGroup";
+import TitleSection from "../components/views/Title";
+import PdfButton from "../components/views/PdfButton";
+import {ListGroupLeft, ListGroupRight} from "../components/views/ListGroup";
 
-import {CustomCodeBlock} from "../components/views/codeBlocks";
+import {CustomCodeBlock} from "../components/views/CodeBlocks";
 import {sectionsCol1, sectionsCol2} from "../utils/dockerData";
 
 const DockerView = () => {
@@ -31,7 +31,7 @@ const DockerView = () => {
                 </div>
             </div>
         </div>
-        <h2 className="mt-5"><a href="https://www.udemy.com/course/docker-guia-practica/">Curso de Docker (Fernando Herrera)</a></h2>
+        <h2 className="mt-5"><a href="https://www.udemy.com/course/docker-guia-practica/">Curso de Docker (Fernando Herrer  a)</a></h2>
         <h3>Notas curso</h3>
         <ListGroupRight 
             

@@ -8,9 +8,9 @@ function PdfButton({image, alt , documentName }){
             className="btn btn-primary btn-rounded"
             onClick={handleDownload}
             >
-            <spn>
+            <span>
                 <img src={ image } alt={ alt } />
-            </spn>
+            </span>
             Guía Atajos
         </button>
     )

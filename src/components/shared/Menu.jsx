@@ -79,6 +79,15 @@ function Menu() {
             <li className="nav-item px-2">
               <Link to="venv" className="nav-link text-decoration-none">Entorno Virtual</Link>
             </li>
+            <li>
+        <div
+          className="bg-dark text-center text-white py-2 d-md-none"
+            onMouseEnter={() => setShowSecondNav(false)}
+          style={{ cursor: 'pointer' }}
+        >
+          ↑
+        </div>
+            </li>
           </ul>
         </div>
       </nav>

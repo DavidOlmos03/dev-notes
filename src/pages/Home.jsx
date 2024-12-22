@@ -3,7 +3,7 @@ import '../styles/Home.css'
 
 const Home = () => {
   return (
-    <section className="text-light p-5 text-center text-sm-start">
+    <section className="text-center text-sm-start">
         <div className="container">
             <div className="d-sm-flex align-items-center justify-content-center">
                 <div className="p-5 shadow rounded mx-auto">

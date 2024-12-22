@@ -1,16 +1,16 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
-import TitleSection from "../components/views/title";
-import PdfButton from "../components/views/pdfButton";
-import {ListGroupLeft, ListGroupRight} from "../components/views/listGroup";
+import TitleSection from "../components/views/Title";
+import PdfButton from "../components/views/PdfButton";
+import {ListGroupLeft, ListGroupRight} from "../components/views/ListGroup";
 
-import {CustomCodeBlock} from "../components/views/codeBlocks";
+import {CustomCodeBlock} from "../components/views/CodeBlocks";
 import {sectionsCol2} from "../utils/angularData";
 
 import { fetchSectionCol1Data } from "../utils/angularDataFireBase";
 
 
-function AngularView() { 
+const AngularView = () => { 
    // Estado para almacenar la data obtenida de Firebase
    const [sectionsCol1, setSectionsCol1] = useState([]);
 
