@@ -33,6 +33,7 @@ function Menu() {
       <div className="container">
         <a href="https://mundostem.netlify.app/" className="navbar-brand">MS</a>
         <Link to="/" className="navbar-brand">DevNotes</Link>
+        
         <button
         className="navbar-toggler"
         type="button"
@@ -49,11 +50,11 @@ function Menu() {
               <li className="nav-item px-2">
                 <Link to="contact" className='nav-link ms-auto'>Contact</Link>
               </li>
-            </ul>
+            </ul>       
+            <LanguageSelect
+             i18n = { i18n } 
+            />
         </div>
-        <LanguageSelect
-          i18n = { i18n } 
-         />
       </div>
       </nav>
 
