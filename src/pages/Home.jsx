@@ -1,13 +1,18 @@
 // src/Home.jsx
 import '../styles/Home.css'
+import { useTranslation } from "react-i18next";
+
 
 const Home = () => {
+
+  const { t, i18n } = useTranslation(["Home"]);
+ 
   return (
     <section className="text-center text-sm-start">
         <div className="container">
             <div className="d-sm-flex align-items-center justify-content-center">
                 <div className="p-5 shadow rounded mx-auto">
-                    <h1 className="text-dark">Bienvenido a <span id="title">Dev Notes</span></h1>
+                    <h1 className="text-dark">{t("welcome")} <span id="title">Dev Notes</span></h1>
                     {/* Wellcome to Dev Notes */}
                     <p className="lead my-4 text-dark">
                       Este sitio web es para compartir mis notas sobre diferentes tecnologías que he aprendido en mi viaje en el desarrollo de software. Es sólo una pequeña sección de mi portafolio.

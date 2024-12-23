@@ -53,11 +53,13 @@ const Section = ({ title, imgSrc, buttonLink, buttonLabel, additionalLink, imgCl
 );
 
 
+import ScrollAnimation from 'react-animate-on-scroll';
+
 function CheatSheet() {
   return (
     <section id="cheat-sheet" className="p-5 bg-dark text-light">
       <div className="container">
-        <h1>Otras guías utiles</h1>
+          <h1>Otras guías utiles</h1>
         <div className="row pt-5">
           {sections.map((section, index) => (
             <Section key={index} {...section} />

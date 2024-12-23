@@ -1,5 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
+import "./config/i18next.config"
 import './input.css'
 import App from './App.jsx'
 

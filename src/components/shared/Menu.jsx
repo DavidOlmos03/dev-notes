@@ -1,10 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
+
+// Transtalation
+import { useTranslation } from "react-i18next";
+import LanguageSelect from "./LanguageSelect"
+
+// Styles personalized
 import '../../styles/Menu.css'
 
-function Menu() {
-  
+function Menu() {    
+  const { t, i18n } = useTranslation();
   const [showSecondNav, setShowSecondNav] = useState(true);
+  
   useEffect(()=>{
      const handleScroll = () => {
        if (window.scrollY > 20){
@@ -44,6 +51,9 @@ function Menu() {
               </li>
             </ul>
         </div>
+        <LanguageSelect
+          i18n = { i18n } 
+         />
       </div>
       </nav>
 
