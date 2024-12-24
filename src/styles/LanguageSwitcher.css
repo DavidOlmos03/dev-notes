@@ -1,0 +1,33 @@
+/* Estilo base para los botones */
+.btn-language {
+  background-color: transparent;
+  border: 2px solid #ccc;
+  border-radius: 50%; /* Botón redondo */
+  width: 50px; /* Tamaño del botón */
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Icono de la bandera */
+.flag-icon {
+  width: 30px; /* Ajusta el tamaño de la bandera */
+  height: auto;
+}
+
+/* Estado seleccionado */
+.btn-language.selected {
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.7); /* Sombra rojiza */
+  border-color: rgba(255, 0, 0, 0.7);
+}
+
+/* Hover effect */
+.btn-language:hover {
+  border-color: #aaa;
+  transform: scale(1.1);
+}
+

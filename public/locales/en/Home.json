@@ -1,3 +1,5 @@
 {
-  "welcome":"Welcome to"
+  "welcome":"Welcome to",
+  "welcome-text":"This website is to share my notes on different technologies I have learned on my journey in software development. It is just a small section of my portfolio.",
+  "button":"Check it out!"
 }

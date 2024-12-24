@@ -3,13 +3,13 @@ import { Link } from "react-router-dom";
 
 // Transtalation
 import { useTranslation } from "react-i18next";
-import LanguageSelect from "./LanguageSelect"
+import LanguageSwitcher from "./LanguageSelect"
 
 // Styles personalized
 import '../../styles/Menu.css'
 
 function Menu() {    
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation('Navbar');
   const [showSecondNav, setShowSecondNav] = useState(true);
   
   useEffect(()=>{
@@ -45,15 +45,13 @@ function Menu() {
         <div className="collapse navbar-collapse" id="navmenu">
             <ul className="navbar-nav ms-auto">
               <li className="nav-item px-2">
-                <Link to="about" className='nav-link ms-auto'>About</Link
+                <Link to="about" className='nav-link ms-auto'>{t('about')}</Link
                 ></li>
               <li className="nav-item px-2">
-                <Link to="contact" className='nav-link ms-auto'>Contact</Link>
+                <Link to="contact" className='nav-link ms-auto'>{t('contact')}</Link>
               </li>
             </ul>       
-            <LanguageSelect
-             i18n = { i18n } 
-            />
+            <LanguageSwitcher />
         </div>
       </div>
       </nav>

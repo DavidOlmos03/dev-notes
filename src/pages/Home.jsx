@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 
 const Home = () => {
 
-  const { t, i18n } = useTranslation(["Home"]);
+  const { t } = useTranslation('Home');
  
   return (
     <section className="text-center text-sm-start">
@@ -15,11 +15,11 @@ const Home = () => {
                     <h1 className="text-dark">{t("welcome")} <span id="title">Dev Notes</span></h1>
                     {/* Wellcome to Dev Notes */}
                     <p className="lead my-4 text-dark">
-                      Este sitio web es para compartir mis notas sobre diferentes tecnologías que he aprendido en mi viaje en el desarrollo de software. Es sólo una pequeña sección de mi portafolio.
+                      {t("welcome-text")}
                     {/*This website is for sharing my notes about different technologies that I have learned on my journey in software development. It is only a small section of my portfolio.*/}
                     </p>
                       <a className="btn btn-primary btn-lg" href="/">
-                        Dale un vistazo!!
+                          {t("button")}
                       </a>
                 </div>
                 <div className="image-container">

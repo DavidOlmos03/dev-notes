@@ -1,17 +1,25 @@
 import i18n from "i18next";
-import Backend from "i18next-http-backend";
+import HttpBackend from "i18next-http-backend";
 import { initReactI18next } from "react-i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
 
 
 i18n
-  .use(Backend)
+  .use(HttpBackend)
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-
-  fallbackLng: "es",
-
+    fallbackLng: 'en',
+    debug: true,
+    interpolation: {
+      escapeValue: false,
+    },
+    backend: {
+      loadPath: '/public/locales/{{lng}}/{{ns}}.json',
+    },
+    ns: ['Home', 'Navbar'],
+    defaultNS: 'Home', 
   });
+
 
 export default i18n; 

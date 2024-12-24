@@ -1,3 +1,5 @@
 {
-  "welcome":"Bienvenido a"
+  "welcome":"Bienvenido a",
+  "welcome-text":"Este sitio web es para compartir mis notas sobre diferentes tecnologías que he aprendido en mi viaje en el desarrollo de software. Es sólo una pequeña sección de mi portafolio.",
+  "button":"Dale un vistazo!"
 }
