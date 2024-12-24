@@ -1,4 +1,11 @@
+ // Transtalation
+import { useTranslation } from "react-i18next";
+import LanguageSwitcher from "../shared/LanguageSelect"
+
 function PdfButton({image, alt , documentName }){
+    
+    const { t } = useTranslation('Common');
+
     const handleDownload = () => {
         location.href = "assets/docs/" + documentName;
     };
@@ -11,7 +18,7 @@ function PdfButton({image, alt , documentName }){
             <span>
                 <img src={ image } alt={ alt } />
             </span>
-            Guía Atajos
+            {t('shortcuts')}
         </button>
     )
 }

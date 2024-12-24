@@ -63,12 +63,10 @@ const AngularView = () => {
                 </div>  
             </div>  
             <h2 className="mt-5"><a href="https://angular.dev/tutorials/learn-angular/1-components-in-angular">Curso de Angular</a></h2>
-            <h3>Notas curso</h3>  
-            <ListGroupRight   
-                  
-            />  
-            <ListGroupLeft />  
-            <ListGroupRight />  
+      {/*<h3>Notas curso</h3>*/}  
+        {/*<ListGroupRight />*/}  
+        {/*<ListGroupLeft />*/}  
+        {/*<ListGroupRight />*/}  
         </div>  
     )  
 }  

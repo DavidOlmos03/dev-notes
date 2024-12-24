@@ -1,7 +1,7 @@
 // src/Home.jsx
 import '../styles/Home.css'
 import { useTranslation } from "react-i18next";
-
+import Card from "../components/shared/Card"
 
 const Home = () => {
 
@@ -22,15 +22,22 @@ const Home = () => {
                           {t("button")}
                       </a>
                 </div>
-                <div className="image-container">
-                <img
-                    className="zoom-image img-fluid d-none d-md-block"
-                    src="/src/assets/imgs/code-notes-logo.png"
-                    alt="codeNotesLogo"
-                    />  
-                </div>
             </div>
-        </div>
+      <div className="mt-5 d-flex justify-content-center flex-wrap">
+      <Card 
+        image="/src/assets/imgs/portfolio.png"
+        title="David Olmos - Portfolio"
+        text="Some quick example text to build on the card title and make up the bulk of the card's content."
+        href="#"
+      />
+      <Card 
+        image="/src/assets/imgs/mundoStem.png"
+        title="Mundo Stem"
+        text="Some quick example text to build on the card title and make up the bulk of the card's content."
+        href="#"
+      />
+    </div>
+      </div>
     </section>
   );
 };

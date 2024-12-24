@@ -17,7 +17,7 @@ i18n
     backend: {
       loadPath: '/public/locales/{{lng}}/{{ns}}.json',
     },
-    ns: ['Home', 'Navbar'],
+    ns: ['Home', 'Navbar','Common'],
     defaultNS: 'Home', 
   });
 
