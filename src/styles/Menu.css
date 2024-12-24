@@ -1,19 +1,49 @@
+/*a{*/
+/*    text-decoration: none;*/
+/*}*/
+/**/
+/*li {*/
+/*    box-sizing: border-box; */
+/*    border-bottom: 5px solid transparent; */
+/*}*/
+/**/
+/*li:hover {*/
+/*    border-bottom: 5px solid rgb(213, 21, 0);*/
+/*}*/
+/**/
+/*.navbar{*/
+/*    align-items: none !important;*/
+/*}*/
+/**/
+/*.second-nav {*/
+/*  transition: opacity 0.5s ease-in-out;*/
+/*}*/
 a{
-    text-decoration: none;
+  text-decoration: none;
 }
 
-li {
-    box-sizing: border-box; 
-    border-bottom: 5px solid transparent; 
+.nav-item {
+  box-sizing: border-box;
+  border-bottom: 5px solid transparent; /* Barra inferior invisible por defecto */
+  transition: border-bottom 0.3s ease, color 0.3s ease; /* Suaviza los cambios */
 }
 
-li:hover {
-    border-bottom: 5px solid rgb(213, 21, 0);
+.nav-item .nav-link {
+  text-decoration: none; /* Sin subrayado */
 }
-.navbar{
-    align-items: none !important;
+
+.nav-item .nav-link:hover,
+.nav-item .nav-link.active {
+  border-bottom: 5px solid rgb(213, 21, 0); /* Barra roja en hover y active */
+  color: rgb(213, 21, 0); /* Cambia el color del texto */
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
 }
 
 .second-nav {
-  transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out; /* Suaviza transiciones */
 }
+

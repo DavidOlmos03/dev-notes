@@ -12,7 +12,7 @@ const Home = () => {
         <div className="container">
             <div className="d-sm-flex align-items-center justify-content-center">
                 <div className="p-5 shadow rounded mx-auto">
-                    <h1 className="text-dark">{t("welcome")} <span id="title">Dev Notes</span></h1>
+                    <h1 className="text-dark">{t("welcome")} <span id="span-title">Dev Notes</span></h1>
                     {/* Wellcome to Dev Notes */}
                     <p className="lead my-4 text-dark">
                       {t("welcome-text")}

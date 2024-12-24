@@ -6,3 +6,18 @@
 .zoom-image {
     transition: transform .7s ease-in-out;
 }
+
+#span-title {
+  display: inline-block; /* Para que los efectos de transform funcionen correctamente */
+  font-weight: bold; /* Resalta el texto */
+  width: auto; /* Ajustar automáticamente al contenido en lugar de un ancho fijo */
+  transition: transform .7s ease-in-out;
+  text-shadow: 0px 4px 10px rgba(255, 0, 0, 0.5); /* Agrega un ligero sombreado al texto */
+  transform: scale(1.1);
+  color: rgb(213, 21, 0);
+}
+
+#span-title:hover {
+  transform: rotate(-10deg);
+}
+

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 // Transtalation
 import { useTranslation } from "react-i18next";
@@ -11,7 +11,9 @@ import '../../styles/Menu.css'
 function Menu() {    
   const { t } = useTranslation('Navbar');
   const [showSecondNav, setShowSecondNav] = useState(true);
-  
+  const location = useLocation();
+  const isActive = (path) => location.pathname === path;
+
   useEffect(()=>{
      const handleScroll = () => {
        if (window.scrollY > 20){
@@ -45,10 +47,10 @@ function Menu() {
         <div className="collapse navbar-collapse" id="navmenu">
             <ul className="navbar-nav ms-auto">
               <li className="nav-item px-2">
-                <Link to="about" className='nav-link ms-auto'>{t('about')}</Link
+                <Link to="/about" className={`nav-link ${isActive("/about") ? "active" :""} ms-auto`}>{t('about')}</Link
                 ></li>
               <li className="nav-item px-2">
-                <Link to="contact" className='nav-link ms-auto'>{t('contact')}</Link>
+                <Link to="/contact" className={`nav-link ${isActive("/contact") ? "active" : ""} ms-auto`}>{t('contact')}</Link>
               </li>
             </ul>       
             <LanguageSwitcher />
@@ -70,25 +72,55 @@ function Menu() {
       <nav className="second-nav navbar navbar-expand-lg bg-dark navbar-dark mx-5 rounded-bottom">
         <div className="container">
           <ul className="navbar-nav mx-auto">
-            <li className="nav-item px-2">
-              <Link to="angular" className="nav-link text-decoration-none">Angular</Link>
-            </li>
-            <li className="nav-item px-2">
-              <Link to="vuejs" className="nav-link text-decoration-none">Vue JS</Link>
-            </li>
-            <li className="nav-item px-2">
-              <Link to="php" className="nav-link text-decoration-none">PHP</Link>
-            </li>
-            <li className="nav-item px-2">
-              <Link to="python" className="nav-link text-decoration-none">Python</Link>
-            </li>
-            <li className="nav-item px-2">
-              <Link to="docker" className="nav-link text-decoration-none">Docker</Link>
-            </li>
-            <li className="nav-item px-2">
-              <Link to="venv" className="nav-link text-decoration-none">Entorno Virtual</Link>
-            </li>
-            <li>
+           <li className="nav-item px-2">
+          <Link
+            to="/angular"
+            className={`nav-link ${isActive("/angular") ? "active" : ""}`}
+          >
+            Angular
+          </Link>
+        </li>
+        <li className="nav-item px-2">
+          <Link
+            to="/vuejs"
+            className={`nav-link ${isActive("/vuejs") ? "active" : ""}`}
+          >
+            Vue JS
+          </Link>
+        </li>
+        <li className="nav-item px-2">
+          <Link
+            to="/php"
+            className={`nav-link ${isActive("/php") ? "active" : ""}`}
+          >
+            PHP
+          </Link>
+        </li>
+        <li className="nav-item px-2">
+          <Link
+            to="/python"
+            className={`nav-link ${isActive("/python") ? "active" : ""}`}
+          >
+            Python
+          </Link>
+        </li>
+        <li className="nav-item px-2">
+          <Link
+            to="/docker"
+            className={`nav-link ${isActive("/docker") ? "active" : ""}`}
+          >
+            Docker
+          </Link>
+        </li>
+        <li className="nav-item px-2">
+          <Link
+            to="/venv"
+            className={`nav-link ${isActive("/venv") ? "active" : ""}`}
+          >
+            Entorno Virtual
+          </Link>
+        </li>
+      <li>
         <div
           className="bg-dark text-center text-white py-2 d-md-none"
             onMouseEnter={() => setShowSecondNav(false)}
