@@ -27,14 +27,20 @@ const Home = () => {
       <Card 
         image="/src/assets/imgs/portfolio.png"
         title="David Olmos - Portfolio"
-        text="Some quick example text to build on the card title and make up the bulk of the card's content."
-        href="#"
+        text={t("portfolio")}
+        href="https://davidolmos-portfolio.netlify.app/about"
       />
       <Card 
         image="/src/assets/imgs/mundoStem.png"
         title="Mundo Stem"
-        text="Some quick example text to build on the card title and make up the bulk of the card's content."
-        href="#"
+        text={t('mundoStem')}
+        href="https://mundostem.netlify.app/"
+      />
+      <Card 
+        image="/src/assets/imgs/wind-rose.png"
+        title="Wind Rose"
+        text={t('wind-rose')}
+        href="https://wind-rose.streamlit.app/"
       />
     </div>
       </div>

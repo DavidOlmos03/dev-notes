@@ -1,6 +1,7 @@
  // Transtalation
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "react-i18next"
 import LanguageSwitcher from "../shared/LanguageSelect"
+import "../../styles/PdfButtonStyle.css"
 
 function PdfButton({image, alt , documentName }){
     
@@ -12,7 +13,7 @@ function PdfButton({image, alt , documentName }){
 
     return (
         <button 
-            className="btn btn-primary btn-rounded"
+            className="button-pdf btn btn-primary btn-rounded"
             onClick={handleDownload}
             >
             <span>

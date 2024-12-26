@@ -9,7 +9,8 @@ import {sectionsCol2} from "../utils/angularData";
   
 import { fetchSectionColData } from "../services/firebase/fireBaseServices";
 import { PersonalBarLoader } from "../components/views/Spinners"; 
-  
+import  Card  from "../components/shared/Card";
+
 const AngularView = () => {   
    // Estado para almacenar la data obtenida de Firebase
    const [sectionsCol1, setSectionsCol1] = useState([]);
@@ -67,7 +68,51 @@ const AngularView = () => {
         {/*<ListGroupRight />*/}  
         {/*<ListGroupLeft />*/}  
         {/*<ListGroupRight />*/}  
-        </div>  
+        
+    <div id="errores-section" className="row pb-5">
+      <h1>Errores</h1>
+      <h6>Error de firma</h6>
+      <p>ng : No se puede cargar el archivo C:\Users\juand\AppData\Roaming\npm\ng.ps1.
+        El archivo C:\Users\juand\AppData\Roaming\npm\ng.ps1 no está firmado
+        digitalmente. No se puede ejecutar este script en el sistema actual. Para
+        obtener más información acerca de la ejecución de scripts y la configuración
+        de la directiva de ejecución, consulta about_Execution_Policies en
+        https:/go.microsoft.com/fwlink/?LinkID=135170.
+        En línea: 1 Carácter: 1</p>
+      <CustomCodeBlock
+          title="Solución"
+          code="Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass"
+          language="typescript"
+      />
+    </div>
+     
+
+      
+    <div className="row">
+      <h1>Deployment</h1>
+      <h4>Gratis</h4>
+      <div className="col-md-6 pb-5">
+        <CustomCodeBlock 
+            title="GitHub Pages"
+            code="ng build --output-path docs --base-href=https://example.github.io/project_name/"
+            language="typescript"
+        />
+      </div>
+      <div className="col-md-6 pb-5">
+        <CustomCodeBlock 
+          title="Netlify"
+          code="npm run build"
+          language="typescript"
+        />
+        <p>Sirve para todo proyecto con <span><b>node</b></span></p>
+        <Card 
+            image="src/assets/imgs/distFile.png"
+            title="dist file"
+            text="Se crea el archivo dist, este archivo se sube a Netlify"
+        />
+      </div>
+    </div>
+      </div>  
     )  
 }  
   

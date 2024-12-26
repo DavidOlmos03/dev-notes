@@ -1,5 +1,9 @@
 {
   "welcome":"Bienvenido a",
   "welcome-text":"Este sitio web es para compartir mis notas sobre diferentes tecnologías que he aprendido en mi viaje en el desarrollo de software. Es sólo una pequeña sección de mi portafolio.",
-  "button":"Dale un vistazo!"
+  "button":"Dale un vistazo!",
+  "visit":"Visitar",
+  "portfolio":"¿Quién soy?. Un Estudiante de Desarrollo de Software ubicado en la ciudad de Medellín Colombia",
+  "mundoStem":"Esta página ha sido creada con el fin de compartir conocimiento y experiencias, de una forma agradable para todos los que la visitan",
+  "wind-rose":"Proyecto de ciencia de datos: predicción de la rosa de los vientos"
 }

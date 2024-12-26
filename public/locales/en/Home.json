@@ -1,5 +1,9 @@
 {
   "welcome":"Welcome to",
   "welcome-text":"This website is to share my notes on different technologies I have learned on my journey in software development. It is just a small section of my portfolio.",
-  "button":"Check it out!"
+  "button":"Check it out!",
+  "visit":"Visit",
+  "portfolio":"Who am I?. A Software Development Student located in the city of Medellín Colombia",
+  "mundoStem":"This page has been created in order to share knowledge and experiences, in a pleasant way for all who visit it.",
+  "wind-rose":"Data Science Project - Wind Rose Prediction"
 }
