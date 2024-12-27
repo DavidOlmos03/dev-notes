@@ -42,7 +42,7 @@ const VueJs = () => {
                 documentName="angular-cheat-sheet.pdf"
             />    
             <div className="codes-block mt-5">
-                <div className="row">    
+               {/* <div className="row">    
                     <div className="col">    
                         {sectionsCol1.length > 0 ? (
                           sectionsCol1.map((section, index) => (
@@ -61,7 +61,45 @@ const VueJs = () => {
                           <PersonalBarLoader />
                         )}              
                     </div>  
-                </div>  
+                </div>*/}
+               <div className="container">
+          <div className="title-section d-flex justify-content-end pb-5">
+          </div>
+          <div className="row">
+            <div className="col-md-4 pb-5">
+              <CustomCodeBlock 
+                  title="Nuevo proyecto"
+                  code="npm create vite@latest name_project"
+              />
+            </div>
+            <div className="col-md-4 pb-5">
+              <CustomCodeBlock 
+                  title="FormKit"
+                  code="npm i @formkit/vue"
+              />
+            </div>
+            <div className="col-md-4 pb-5">
+              <CustomCodeBlock 
+                title="Tailwindcss para forms"
+                code="npm i -D @tailwindcss/forms"
+              />
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-md-4 pb-5">
+              <CustomCodeBlock 
+                title="Firebase"
+                code="npm install firebase vuefire"
+              /> 
+            </div>
+            <div className="col-md-4 pb-5">
+              <CustomCodeBlock 
+                title="Nombre único"
+                code="npm i uid"
+              />
+            </div>
+          </div>
+        </div>
             </div>  
             <h2 className="mt-5"><a href="https://angular.dev/tutorials/learn-angular/1-components-in-angular">Curso de Angular</a></h2>
       {/*<h3>Notas curso</h3>*/}  

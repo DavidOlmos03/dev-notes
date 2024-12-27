@@ -85,9 +85,6 @@ const AngularView = () => {
           language="typescript"
       />
     </div>
-     
-
-      
     <div className="row">
       <h1>Deployment</h1>
       <h4>Gratis</h4>
