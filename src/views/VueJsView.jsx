@@ -34,10 +34,10 @@ const VueJs = () => {
         <div>    
             <TitleSection     
                 title="VueJs"    
-                image="/src/assets/imgs/iconVuejs.png"
+                image="/assets/imgs/iconVuejs.png"
             />    
             <PdfButton     
-                image="/src/assets/imgs/iconPdf.png"
+                image="/assets/imgs/iconPdf.png"
                 alt="pdf"    
                 documentName="angular-cheat-sheet.pdf"
             />    
@@ -75,7 +75,10 @@ const VueJs = () => {
             <div className="col-md-4 pb-5">
               <CustomCodeBlock 
                   title="FormKit"
-                  code="npm i @formkit/vue"
+                  code={`npm i @formkit/vue
+npm i @formkit/themes`}
+                  language="typescript"
+                  showLineNumbers={true}
               />
             </div>
             <div className="col-md-4 pb-5">

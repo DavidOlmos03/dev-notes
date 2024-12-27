@@ -10,10 +10,10 @@ const DockerView = () => {
         <div>
         <TitleSection 
             title="Docker"
-            image="/src/assets/imgs/iconDocker.png"
+            image="/assets/imgs/iconDocker.png"
         />
         <PdfButton 
-            image="/src/assets/imgs/iconPdf.png"
+            image="/assets/imgs/iconPdf.png"
             alt="pdf"
             documentName="docker-cheat-sheet.pdf"
         />
@@ -31,13 +31,29 @@ const DockerView = () => {
                 </div>
             </div>
         </div>
-        <h2 className="mt-5"><a href="https://www.udemy.com/course/docker-guia-practica/">Curso de Docker (Fernando Herrer  a)</a></h2>
-        <h3>Notas curso</h3>
-        <ListGroupRight 
-            
-        />
-        <ListGroupLeft />
-        <ListGroupRight />
+        <h2 className="mt-5"><a href="https://www.udemy.com/course/docker-guia-practica/">Curso de Docker (Fernando Herrera)</a></h2>
+        
+        <div className="row">
+            <div className="col-md-6 pb-5">
+            <h6>Correr contenedor con variables de entorno específicas y en puertos específicos (ejemplo)</h6>
+            <p>Obs. Para hacer el salto de linea se utiliza ` en Windows y \ en MacOS o Linux</p>
+            <CustomCodeBlock 
+                title="Ejemplo"
+                code={`docker container run
+-dp 3306:3306
+--name world-db
+--env MARIADB_USER=example-user
+--env MARIADB_PASSWORD=user-password
+--env MARIADB_ROOT_PASSWORD=root-secret-password
+--env MARIADB_DATABASE=world-db
+--volume world-db:/var/lib/mysql
+mariadb:jammy`} 
+                language="typescript"
+                showLineNumbers={true}
+            />
+            </div>
+        </div>
+
     </div>
     )
 }

@@ -8,10 +8,10 @@ const PhpView = () => {
       <div>
         <TitleSection
           title="Laravel"
-          image="/src/assets/imgs/iconLaravel.png"
+          image="/assets/imgs/iconLaravel.png"
         />
         <PdfButton
-          image="/src/assets/imgs/iconPdf.png"
+          image="/assets/imgs/iconPdf.png"
           alt="pdf"
           documentName="angular-cheat-sheet.pdf"
         />
@@ -85,9 +85,13 @@ const PhpView = () => {
       <div className="row pt-5">
           <div className="d-flex justify-content-start align-items-center mb-4">
             <h2 className="me-3">Curso básico</h2>
-            <img src="src/assets/imgs/iconYoutube.png" className="img-fluid" alt="iconYoutube" style={{ width: '50px' }} ></img>
+            <img src="/assets/imgs/iconYoutube.png" className="img-fluid" alt="iconYoutube" style={{ width: '50px' }} ></img>
           </div>
-          <Video videoUrl="https://www.youtube.com/embed/AE5U8zjkU2s" title="Videos en español (23 videos)"></Video>
+          <div className="col-12 col-md-6 pb-5">
+             <Video 
+             videoUrl="https://www.youtube.com/embed/AE5U8zjkU2s" 
+             title="Videos en español (23 videos)" />
+          </div>
         </div>
     
        {/** End Basic Course */}
@@ -99,7 +103,6 @@ const PhpView = () => {
           </ul>
         </div>
       </div>
-
       </div>
     );
 }

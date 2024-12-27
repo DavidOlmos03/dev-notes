@@ -25,19 +25,19 @@ const Home = () => {
             </div>
       <div className="mt-5 d-flex justify-content-center flex-wrap">
       <Card 
-        image="/src/assets/imgs/portfolio.png"
+        image="/assets/imgs/portfolio.png"
         title="David Olmos - Portfolio"
         text={t("portfolio")}
         href="https://davidolmos-portfolio.netlify.app/about"
       />
       <Card 
-        image="/src/assets/imgs/mundoStem.png"
+        image="/assets/imgs/mundoStem.png"
         title="Mundo Stem"
         text={t('mundoStem')}
         href="https://mundostem.netlify.app/"
       />
       <Card 
-        image="/src/assets/imgs/wind-rose.png"
+        image="/assets/imgs/wind-rose.png"
         title="Wind Rose"
         text={t('wind-rose')}
         href="https://wind-rose.streamlit.app/"

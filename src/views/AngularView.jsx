@@ -34,10 +34,10 @@ const AngularView = () => {
         <div>    
             <TitleSection     
                 title="Angular"    
-                image="/src/assets/imgs/angular.svg"
+                image="/assets/imgs/angular.svg"
             />    
             <PdfButton     
-                image="/src/assets/imgs/iconPdf.png"
+                image="/assets/imgs/iconPdf.png"
                 alt="pdf"    
                 documentName="angular-cheat-sheet.pdf"
             />    
@@ -103,7 +103,7 @@ const AngularView = () => {
         />
         <p>Sirve para todo proyecto con <span><b>node</b></span></p>
         <Card 
-            image="src/assets/imgs/distFile.png"
+            image="/assets/imgs/distFile.png"
             title="dist file"
             text="Se crea el archivo dist, este archivo se sube a Netlify"
         />

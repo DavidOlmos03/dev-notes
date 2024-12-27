@@ -1,6 +1,6 @@
 const Video = ({ videoUrl, title }) => {
     return (
-    <div className="col-12 col-md-6">
+    <div>
         <div className="card border-0 video-card rounded">
             <div className="card-body p-0">
             <h6 className="card-title text-center py-2">{title}</h6>

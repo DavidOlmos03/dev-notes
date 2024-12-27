@@ -19,7 +19,7 @@ function LanguageSwitcher() {
         onClick={() => changeLanguage('en')}
       >
         <img
-          src="src/assets/imgs/iconEn.png" // Ruta al archivo .png de la bandera
+          src="/assets/imgs/iconEn.png" // Ruta al archivo .png de la bandera
           alt="English"
           className="flag-icon"
         />
@@ -31,7 +31,7 @@ function LanguageSwitcher() {
         onClick={() => changeLanguage('es')}
       >
         <img
-          src="src/assets/imgs/iconEs.png" // Ruta al archivo .png de la bandera
+          src="/assets/imgs/iconEs.png" // Ruta al archivo .png de la bandera
           alt="Español"
           className="flag-icon"
         />

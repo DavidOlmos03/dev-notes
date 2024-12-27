@@ -4,12 +4,12 @@ import { useTranslation } from "react-i18next";
 const sections = [
   {
     title: "GitHub",
-    imgSrc: "/src/assets/imgs/iconGithub.png",
+    imgSrc: "/assets/imgs/iconGithub.png",
     buttonLink: "assets/docs/github-cheat-sheet.pdf",
   },
   {
     title: "HTML",
-    imgSrc: "/src/assets/imgs/iconTags.png",
+    imgSrc: "/assets/imgs/iconTags.png",
     buttonLink: "assets/docs/github-cheat-sheet.pdf",
     additionalLink: {
       url: "https://developer.mozilla.org/en-US/docs/Web/CSS",
@@ -18,7 +18,7 @@ const sections = [
   },
   {
     title: "MySQL",
-    imgSrc: "/src/assets/imgs/iconMysql.png",
+    imgSrc: "/assets/imgs/iconMysql.png",
     buttonLink: "assets/docs/github-cheat-sheet.pdf",
   },
 ];
@@ -40,7 +40,7 @@ const Section = ({ title, imgSrc, buttonLink, buttonLabel, additionalLink, imgCl
     </div>
     <div className="row px-5">
       <PdfButton     
-        image="/src/assets/imgs/iconPdf2.png"
+        image="/assets/imgs/iconPdf2.png"
         alt="pdf"    
         documentName= {buttonLink}
       />   
