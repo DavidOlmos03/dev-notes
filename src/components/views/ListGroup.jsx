@@ -1,3 +1,5 @@
+import '../../styles/listGroup.css'
+
 function ListGroup({list}) {
   if(list !== null && list !== undefined){
     const items = Object.values(list);

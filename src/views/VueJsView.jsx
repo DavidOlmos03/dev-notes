@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 import TitleSection from "../components/views/Title";
 import PdfButton from "../components/views/PdfButton";
-import {ListGroupLeft, ListGroupRight} from "../components/views/ListGroup";
+import {ListGroup} from "../components/views/ListGroup";
 
 import {CustomCodeBlock} from "../components/views/CodeBlocks";
 import {sectionsCol2} from "../utils/angularData";
@@ -104,7 +104,14 @@ npm i @formkit/themes`}
           </div>
         </div>
             </div>  
-            <h2 className="mt-5"><a href="https://angular.dev/tutorials/learn-angular/1-components-in-angular">Curso de Angular</a></h2>
+            <h2 className="mt-5"><a href="https://www.udemy.com/course/vuejs-la-guia-completa-composition-pinia-mevn-creando-proyectos-reales/?couponCode=24T7MT123024">Curso de VueJs 
+              <span>
+              <h6>
+              Juan Pablo De la torre Valdez
+              </h6>
+              </span>
+              </a>
+            </h2>
       {/*<h3>Notas curso</h3>*/}  
         {/*<ListGroupRight />*/}  
         {/*<ListGroupLeft />*/}  

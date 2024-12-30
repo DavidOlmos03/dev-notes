@@ -2,6 +2,8 @@ import TitleSection from "../components/views/Title";
 import PdfButton from "../components/views/PdfButton";
 import {CustomCodeBlock} from "../components/views/CodeBlocks";
 import Video from "../components/shared/Video";
+import '../styles/PhpView.css'
+
 
 const PhpView = () => {
     return (
