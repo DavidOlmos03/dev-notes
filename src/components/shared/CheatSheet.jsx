@@ -5,12 +5,12 @@ const sections = [
   {
     title: "GitHub",
     imgSrc: "/assets/imgs/iconGithub.png",
-    buttonLink: "assets/docs/github-cheat-sheet.pdf",
+    documentName: "github-cheat-sheet.pdf",
   },
   {
     title: "HTML",
     imgSrc: "/assets/imgs/iconTags.png",
-    buttonLink: "assets/docs/github-cheat-sheet.pdf",
+    documentName: "html-tags-chart.pdf",
     additionalLink: {
       url: "https://developer.mozilla.org/en-US/docs/Web/CSS",
       text: "css",
@@ -19,11 +19,11 @@ const sections = [
   {
     title: "MySQL",
     imgSrc: "/assets/imgs/iconMysql.png",
-    buttonLink: "assets/docs/github-cheat-sheet.pdf",
+    documentName: "MySQL-Commands-Cheat-Sheet-by-PhoenixNAP.pdf",
   },
 ];
 
-const Section = ({ title, imgSrc, buttonLink, buttonLabel, additionalLink, imgClass }) => (
+const Section = ({ title, imgSrc, documentName, buttonLabel, additionalLink, imgClass }) => (
   <div className="col-md col-sm-12 py-2">
     <div className="row">
       <div className="d-flex justify-content-center pb-2">
@@ -42,7 +42,7 @@ const Section = ({ title, imgSrc, buttonLink, buttonLabel, additionalLink, imgCl
       <PdfButton     
         image="/assets/imgs/iconPdf2.png"
         alt="pdf"    
-        documentName= {buttonLink}
+        documentName= {documentName}
       />   
     </div>
   </div>

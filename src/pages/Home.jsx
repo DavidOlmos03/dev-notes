@@ -18,7 +18,7 @@ const Home = () => {
                       {t("welcome-text")}
                     {/*This website is for sharing my notes about different technologies that I have learned on my journey in software development. It is only a small section of my portfolio.*/}
                     </p>
-                      <a className="btn btn-primary btn-lg" href="/">
+                      <a className="btn btn-primary btn-lg" href="https://davidolmos-portfolio.netlify.app/about">
                           {t("button")}
                       </a>
                 </div>

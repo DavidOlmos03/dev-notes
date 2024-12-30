@@ -1,6 +1,6 @@
 import TitleSection from "../components/views/Title";
 import PdfButton from "../components/views/PdfButton";
-import {ListGroupLeft, ListGroupRight} from "../components/views/ListGroup";
+import {ListGroup} from "../components/views/ListGroup";
 
 import {CustomCodeBlock} from "../components/views/CodeBlocks";
 import {sectionsCol1, sectionsCol2} from "../utils/dockerData";
