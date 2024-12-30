@@ -1,0 +1,30 @@
+{
+    "angular":"Curso de Angular",
+    "lists": {
+        "title": "Topics",
+        "list1": {
+            "text1": "Anatomia de un componente",
+            "text2": "Actualizando componente",
+            "text3": "Composición de componentes",
+            "text4": "Control de flujo en componentes - @if"
+        },
+        "list2": {
+            "text1": "Control de flujo - @for",
+            "text2": "Vinculación de propiedad",
+            "text3": "Manejo de eventos",
+            "text4": "@Input"
+        },
+        "list3": {
+            "text1": "@Output",
+            "text2": "Vistas aplazables",
+            "text3": "Optimizando imagenes",
+            "text4": "Manejo de rutas (3 secciones)"
+        },
+        "list4": {
+            "text1": "Formularios (4 secciones)",
+            "text2": "Inyección de dependencias (3 secciones)",
+            "text3": "Pipes (3 secciones)"
+        }
+
+    }
+}

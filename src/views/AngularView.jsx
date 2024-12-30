@@ -2,19 +2,23 @@ import { useEffect, useState } from "react";
 
 import TitleSection from "../components/views/Title";
 import PdfButton from "../components/views/PdfButton";
-import {ListGroupLeft, ListGroupRight} from "../components/views/ListGroup";
+import { ListGroup } from "../components/views/ListGroup";
 
 import {CustomCodeBlock} from "../components/views/CodeBlocks";
-import {sectionsCol2} from "../utils/angularData";
+// import {sectionsCol2} from "../utils/angularData";
   
 import { fetchSectionColData } from "../services/firebase/fireBaseServices";
 import { PersonalBarLoader } from "../components/views/Spinners"; 
 import  Card  from "../components/shared/Card";
 
+import { useTranslation } from "react-i18next";
+
 const AngularView = () => {   
    // Estado para almacenar la data obtenida de Firebase
    const [sectionsCol1, setSectionsCol1] = useState([]);
    const [sectionsCol2, setSectionsCol2] = useState([]);
+
+   const { t } = useTranslation('AngularView');
 
    useEffect(( ) => {    
       async function fetchData() {    
@@ -63,12 +67,22 @@ const AngularView = () => {
                     </div>  
                 </div>  
             </div>  
-            <h2 className="mt-5"><a href="https://angular.dev/tutorials/learn-angular/1-components-in-angular">Curso de Angular</a></h2>
-      {/*<h3>Notas curso</h3>*/}  
-        {/*<ListGroupRight />*/}  
-        {/*<ListGroupLeft />*/}  
-        {/*<ListGroupRight />*/}  
-        
+            <h1 className="mt-5"><a href="https://angular.dev/tutorials/learn-angular/1-components-in-angular">{t('angular')}</a></h1>  
+        <h2>Topics</h2>
+        <div className="row">
+          <ListGroup 
+            list={t('lists.list1', { returnObjects: true })}
+          />  
+            <ListGroup 
+              list={t('lists.list2', { returnObjects: true })}
+            />
+            <ListGroup 
+              list={t('lists.list3', { returnObjects: true })}
+            />
+            <ListGroup
+              list={t('lists.list4', { returnObjects: true })}
+            />
+        </div>
     <div id="errores-section" className="row pb-5">
       <h1>Errores</h1>
       <h6>Error de firma</h6>

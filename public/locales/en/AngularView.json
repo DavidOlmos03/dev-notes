@@ -1,0 +1,29 @@
+{
+    "angular":"Angular Course",
+    "lists": {
+        "title": "Topics",
+        "list1": {
+            "text1": "Component Anatomy",
+            "text2": "Updating a component",
+            "text3": "Composing components",
+            "text4": "Control flow in components - @if"
+        },
+        "list2": {
+            "text1": "Flow control - @for",
+            "text2": "Property binding",
+            "text3": "Event handling",
+            "text4": "@Input"
+        },
+        "list3": {
+            "text1": "@Output",
+            "text2": "Lazy Views",
+            "text3": "Optimizing Images",
+            "text4": "Routing Management (3 sections)"
+        },
+        "list4": {
+            "text1": "Forms (4 sections)",
+            "text2": "Dependency Injection (3 sections)",
+            "text3": "Pipes (3 sections)"
+        }
+    }
+}
