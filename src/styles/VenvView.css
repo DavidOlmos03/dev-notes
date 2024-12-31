@@ -1,0 +1,12 @@
+#linux-windows {
+    width: 70%;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 10);
+    transition: all 0.3s ease-in-out;
+    transform:  rotate(-10deg) !important;
+}
+
+#linux-windows:hover {
+    transform: scale(1.2) rotate(10deg) !important;
+    box-shadow: 0 0 20px rgb(213, 21, 0);
+}

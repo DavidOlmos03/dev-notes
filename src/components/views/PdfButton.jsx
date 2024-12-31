@@ -1,9 +1,8 @@
  // Transtalation
 import { useTranslation } from "react-i18next"
-import LanguageSwitcher from "../shared/LanguageSelect"
 import "../../styles/PdfButtonStyle.css"
 
-function PdfButton({image, alt , documentName }){
+function PdfButton({ image, alt , documentName }){
     
     const { t } = useTranslation('Common');
 

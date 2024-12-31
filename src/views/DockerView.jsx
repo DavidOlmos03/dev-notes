@@ -31,7 +31,8 @@ const DockerView = () => {
                 </div>
             </div>
         </div>
-        <h2 className="mt-5"><a href="https://www.udemy.com/course/docker-guia-practica/">Curso de Docker (Fernando Herrera)</a></h2>
+        <h2 className="mt-5"><a href="https://www.udemy.com/course/docker-guia-practica/">Curso de Docker 
+        <span><h6>Fernando Herrera</h6></span></a></h2>
         
         <div className="row">
             <div className="col-md-6 pb-5">
